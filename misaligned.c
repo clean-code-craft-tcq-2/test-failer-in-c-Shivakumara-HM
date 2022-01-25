@@ -17,6 +17,8 @@ int printColorMap()
 
 void printOnConsole(int MajorColorNumber, int MinorColorNumber)
 {
+    assert( MajorColorNames[Index / numberOfMajorColors] == MajorColor);
+    assert( MinorColorNames[Index / numberOfMinorColors] == MinorColor);
     printf("%d | %s | %s\n", MajorColorNumber*5+MinorColorNumber, majorColor[MajorColorNumber], minorColor[MinorColorNumber]);
 }
     
