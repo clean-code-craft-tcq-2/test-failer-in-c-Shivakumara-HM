@@ -17,10 +17,11 @@ int printColorMap()
 
 void printOnConsole(int MajorColorNumber, int MinorColorNumber)
 {
-    printf("%d | %s | %s\n",MajorColorNumber*5+MinorColorNumber, majorColor[MajorColorNumber], minorColor[MinorColorNumber]);
+    printf("%d | %s | %s\n", MajorColorNumber*5+MinorColorNumber, majorColor[MajorColorNumber], minorColor[MinorColorNumber]);
+}
     
-
-int main() {
+int main() 
+{
     int result = printColorMap();
     assert(result == 25);
     printf("All is well (maybe!)\n");
