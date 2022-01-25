@@ -9,17 +9,18 @@ int printColorMap()
     {
         for(j = 0; j < 5; j++) 
         {
-           printOnConsole(i,j);
+           printOnConsole(i * 5 + j , MajorColorNames[i] ,  MinorColorNames[i]);
         }
     }
     return i * j;
 }
 
-void printOnConsole(int MajorColorNumber, int MinorColorNumber)
-{
-    assert( MajorColorNames[Index / numberOfMajorColors] == MajorColor);
-    assert( MinorColorNames[Index / numberOfMinorColors] == MinorColor);
-    printf("%d | %s | %s\n", MajorColorNumber*5+MinorColorNumber, majorColor[MajorColorNumber], minorColor[MinorColorNumber]);
+void printOnConsole(int Index, const char* MajorColor, const char* MinorColor)
+{ 
+        assert( MajorColorNames[Index / numberOfMajorColors] == MajorColor);
+        assert( MinorColorNames[Index / numberOfMinorColors] == MinorColor);
+     
+        printf("%d | %s | %s\n", Index , MajorColor, MinorColor);  
 }
     
 int main() 
