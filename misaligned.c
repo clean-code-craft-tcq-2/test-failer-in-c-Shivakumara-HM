@@ -20,13 +20,13 @@ void testNumberToPair(int Index, const char* MajorColor, const char* MinorColor)
 {
         assert( MajorColorNames[Index / numberOfMajorColors] == MajorColor);
         assert( MinorColorNames[Index % numberOfMinorColors] == MinorColor);
-        printOnConsole(i * 5 + j , MajorColorNames[i] ,  MinorColorNames[i]);
+        printOnConsole(MajorColor * 5 + MinorColor , MajorColorNames[MajorColor] ,  MinorColorNames[MinorColor]);
 }
 
 void printOnConsole(int Index, const char* MajorColor, const char* MinorColor)
 { 
    
-           printf("%d | %s | %s\n", Index , MajorColor, MinorColor);  
+        printf("%d | %s | %s\n", Index , MajorColor, MinorColor);  
 }
     
 int main() 
