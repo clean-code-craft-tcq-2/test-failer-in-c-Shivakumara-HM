@@ -1,6 +1,6 @@
 ColorPair GetColorFromPairNumber(int pairNumber);
 void testNumberToPair(int pairNumber, const char* expectedMajor, const char* expectedMinor);
-int printColorMap() ;
+int printColorMap();
 
 const char* MajorColorNames[] = {"White", "Red", "Black", "Yellow", "Violet"};
 const char* MinorColorNames[] = {"Blue", "Orange", "Green", "Brown", "Slate"};
