@@ -9,7 +9,7 @@ int printColorMap()
     {
         for(j = 0; j < 5; j++) 
         {
-           testNumberToPair(i * 5 + j , MajorColorNames[i] ,  MinorColorNames[i]);
+           printOnConsole(i * 5 + j , MajorColorNames[i] ,  MinorColorNames[i]);
         }
     }
     return i * j;
@@ -20,7 +20,6 @@ void testNumberToPair(int Index, const char* MajorColor, const char* MinorColor)
 {
         assert( MajorColorNames[Index / numberOfMajorColors] == MajorColor);
         assert( MinorColorNames[Index % numberOfMinorColors] == MinorColor);
-        printOnConsole(MajorColor * 5 + MinorColor , MajorColorNames[MajorColor] ,  MinorColorNames[MinorColor]);
 }
 
 void printOnConsole(int Index, const char* MajorColor, const char* MinorColor)
