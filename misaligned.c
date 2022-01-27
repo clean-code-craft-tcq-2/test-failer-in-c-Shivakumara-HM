@@ -24,8 +24,8 @@ int printColorMap()
     {
         for(j = 0; j < 5; j++) 
         {
-            printf("%d | %s | %s\n", i * 5 + j, majorColor[i], minorColor[i]);
-            testNumberToPair( i * 5 + j, majorColor[i], minorColor[i]);
+            printf("%d | %s | %s\n", i * 5 + j, majorColorNames[i], minorColorNames[i]);
+            testNumberToPair( i * 5 + j, majorColorNames[i], minorColorNames[i]);
         }
     }
     return i * j;
