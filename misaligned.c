@@ -2,6 +2,21 @@
 #include <assert.h>
 #include "misaligned.h"
 
+ColorPair GetColorFromPairNumber(int pairNumber) 
+{
+    ColorPair colorPair;
+    colorPair.majorColor = MajorColorNames[(pairNumber / numberOfMajorColors)];
+    colorPair.minorColor = MinorColorNames[(pairNumber % numberOfMinorColors)];
+    return colorPair;
+}
+
+void testNumberToPair(int pairNumber, const char* expectedMajor, const char* expectedMinor)
+{
+    ColorPair colorPair = GetColorFromPairNumber(pairNumber);
+    assert(colorPair.majorColor == expectedMajor);
+    assert(colorPair.minorColor == expectedMinor);
+}
+
 int printColorMap() 
 {
     int i = 0, j = 0;
@@ -9,24 +24,13 @@ int printColorMap()
     {
         for(j = 0; j < 5; j++) 
         {
-           printOnConsole(i * 5 + j , MajorColorNames[i] ,  MinorColorNames[i]);
+            printf("%d | %s | %s\n", i * 5 + j, majorColor[i], minorColor[i]);
+            VerifyNumberToPair( i * 5 + j, majorColor[i], minorColor[i]);
         }
     }
     return i * j;
 }
 
-
-void testNumberToPair(int Index, const char* MajorColor, const char* MinorColor)
-{
-        assert( MajorColorNames[Index / numberOfMajorColors] == MajorColor);
-        assert( MinorColorNames[Index % numberOfMinorColors] == MinorColor);
-}
-
-void printOnConsole(int Index, const char* MajorColor, const char* MinorColor)
-{ 
-   
-        printf("%d | %s | %s\n", Index , MajorColor, MinorColor);  
-}
     
 int main() 
 {
