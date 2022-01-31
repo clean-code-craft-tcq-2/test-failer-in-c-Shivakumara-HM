@@ -8,7 +8,7 @@ char size(int cms)
     {
         sizeName = 'S';
     } 
-    else if(cms > 38 && cms < 42) 
+    else if(cms >= 38 && cms <= 42) 
     {
         sizeName = 'M';
     } 
@@ -19,12 +19,18 @@ char size(int cms)
     return sizeName;
 }
 
+
+testShirtSize(int sizenumber, char sizename)
+{
+    assert(size(sizenumber) == sizename);
+}
+    
 int main() {
-    assert(size(37) == 'S');
-    assert(size(40) == 'M');
-    assert(size(43) == 'L');
-    assert(size(38) == 'S');
-    assert(size(42) == 'L');
+    testShirtSize(37, 'S');
+    testShirtSize(40, 'M');
+    testShirtSize(43, 'L');
+    testShirtSize(38, 'M');
+    testShirtSize(42, 'M');
     printf("All is well (maybe!)\n");
     return 0;
 }
