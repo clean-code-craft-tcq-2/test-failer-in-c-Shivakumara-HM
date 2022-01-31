@@ -19,7 +19,6 @@ char size(int cms)
     return sizeName;
 }
 
-
 void testShirtSize(int sizeNumber, char sizeName)
 {
     assert(size(sizeNumber) == sizeName);
