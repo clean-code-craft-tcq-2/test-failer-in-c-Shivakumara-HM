@@ -16,6 +16,11 @@ int networkAlertStub(float celcius)
     }
 }
 
+float ConvertFarenheitToCelsius(float farenheit)
+{
+    return (farenheit - 32) * 5 / 9;
+}
+
 void alertInCelcius(float farenheit) 
 {
     float celcius = (farenheit - 32) * 5 / 9;
