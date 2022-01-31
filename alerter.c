@@ -23,7 +23,7 @@ float ConvertFarenheitToCelsius(float farenheit)
 
 void alertInCelcius(float farenheit) 
 {
-    float celcius = (farenheit - 32) * 5 / 9;
+    float celcius = ConvertFarenheitToCelsius(farenheit);
     int returnCode = networkAlertStub(celcius);
     if (returnCode != 200) 
     {
