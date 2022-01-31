@@ -20,9 +20,9 @@ char size(int cms)
 }
 
 
-testShirtSize(int sizenumber, char sizename)
+void testShirtSize(int size, char sizeName)
 {
-    assert(size(sizenumber) == sizename);
+    assert(size(size) == sizName);
 }
     
 int main() {
