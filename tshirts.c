@@ -22,7 +22,7 @@ char size(int cms)
 
 void testShirtSize(int size, char sizeName)
 {
-    assert(size(size) == sizName);
+    assert(size(size) == sizeName);
 }
     
 int main() {
