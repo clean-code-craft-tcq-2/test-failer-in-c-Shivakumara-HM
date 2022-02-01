@@ -6,7 +6,7 @@ ColorPair GetColorFromPairNumber(int pairNumber)
 {
     ColorPair colorPair;
     colorPair.majorColor = MajorColorNames[(pairNumber / numberOfMajorColors)];
-    colorPair.minorColor = MinorColorNames[(pairNumber % numberOfMinorColors)];
+    colorPair.minorColor = MinorColorNames[(pairNumber / numberOfMinorColors)];
     return colorPair;
 }
 
