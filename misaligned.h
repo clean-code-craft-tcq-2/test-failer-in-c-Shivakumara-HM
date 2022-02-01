@@ -12,5 +12,5 @@ typedef struct {
 ColorPair GetColorFromPairNumber(int pairNumber);
 void testNumberToPair(int pairNumber, const char* expectedMajor, const char* expectedMinor);
 int printColorMap();
-void formatColorPrinter(int pairNumber, const char* MajorColor, const char* MinorColor);
+void printOnConsole(int pairNumber, const char* MajorColor, const char* MinorColor);
 
