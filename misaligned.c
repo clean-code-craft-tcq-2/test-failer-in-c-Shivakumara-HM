@@ -40,6 +40,13 @@ int main()
 {
     int result = printColorMap(testNumberToPair(*colorPair));
     assert(result == 25);
+    for(int i = 0; i < 5; i++) 
+    {
+        for(int j = 0; j < 5; j++) 
+        {
+          testNumberToPair( i * 5 + j, majorColor[i], minorColor[j]);
+        }
+    }
     printf("All is well (maybe!)\n");
     return 0;
 }
