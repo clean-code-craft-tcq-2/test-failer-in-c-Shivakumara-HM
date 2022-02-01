@@ -38,7 +38,7 @@ int printColorMap()
     
 int main() 
 {
-    int result = printColorMap(testNumberToPair(*colorPair));
+    int result = printColorMap();
     assert(result == 25);
     for(int i = 0; i < 5; i++) 
     {
