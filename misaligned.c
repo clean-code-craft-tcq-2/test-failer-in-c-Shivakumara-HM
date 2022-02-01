@@ -19,7 +19,7 @@ void testNumberToPair(int pairNumber, const char* expectedMajor, const char* exp
 
 void formatColorPrinter(int pairNumber, const char* MajorColor, const char* MinorColor)
 {
-    printf("%d | %s | %s\n", pairNumber, MajorColorNames, MinorColorNames);
+    printf("%d | %s | %s\n", pairNumber, MajorColor, MinorColor);
 }
 
 int printColorMap() 
