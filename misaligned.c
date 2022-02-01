@@ -17,6 +17,11 @@ void testNumberToPair(int pairNumber, const char* expectedMajor, const char* exp
     assert(colorPair.minorColor == expectedMinor);
 }
 
+void printColorPair(int pairNumber, const char* MajorColor, const char* MinorColor)
+{
+    printf("%d | %s | %s\n", pairNumber, MajorColor, MinorColor);
+}
+
 int printColorMap() 
 {
     int i = 0, j = 0;
@@ -24,8 +29,7 @@ int printColorMap()
     {
         for(j = 0; j < 5; j++) 
         {
-            printf("%d | %s | %s\n", i * 5 + j, MajorColorNames[i], MinorColorNames[i]);
-            testNumberToPair( i * 5 + j, MajorColorNames[i], MinorColorNames[i]);
+            printColorPair(i * 5 + j, majorColor[i], minorColor[j]);
         }
     }
     return i * j;
